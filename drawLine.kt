@@ -4,7 +4,6 @@ import java.awt.Color
 import java.awt.image.BufferedImage  
 
 fun drawLines(w: Int, h: Int): BufferedImage {
-    // Add your code here
     val image = BufferedImage(w, h, BufferedImage.TYPE_INT_RGB)
     val graphics = image.createGraphics()
     graphics.color = Color.RED
