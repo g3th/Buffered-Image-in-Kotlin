@@ -7,6 +7,6 @@ How to save everything to a file and how to draw multiple lines in the same imag
 
 Simple compilation (no need for dependencies, since everything is standard library):
 
-```kotlinc drawLines.kt -include-runtime drawLines.jar
+```kotlinc drawLines.kt -include-runtime drawLines.jar```
 
 ```java -jar drawLines.jar```
