@@ -13,8 +13,16 @@ fun drawLines(w: Int, h: Int): BufferedImage {
     return image
 }
 
+fun drawPolygon(w: Int, h: Int): BufferedImage{
+    val image = BufferedImage(w, h, BufferedImage.TYPE_INT_RGB)
+    val graphics = image.createGraphics()
+    graphics.color = Color.YELLOW
+    graphics.drawPolygon(intArrayOf(50, 100, 200, 250, 200, 100), intArrayOf(150, 250, 250, 150, 50, 50), 6)
+    return image
+}
+
 fun main(){
-	val dir = System.getProperty("user.home")
+    val dir = System.getProperty("user.home")
     val writeImageToFile = File("${dir}/myimage.png")
-    ImageIO.write(drawLines(200,200), "png", writeImageToFile)
+    ImageIO.write(drawPolygon(300,300), "png", writeImageToFile)
 }

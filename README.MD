@@ -5,6 +5,8 @@ A simple reference for how to draw lines, rectangles, circles, polygons etc.. us
 
 How to save everything to a file and how to draw multiple lines in the same image.
 
+Draws two crossed lines, or a hexagon with the colours set in both functions.
+
 Simple compilation (no need for dependencies, since everything is standard library):
 
 ```kotlinc drawLines.kt -include-runtime drawLines.jar```
