@@ -13,6 +13,16 @@ fun drawLines(w: Int, h: Int): BufferedImage {
     return image
 }
 
+fun filledRectangle(w: Int, h: Int): BufferedImage {
+    val image = BufferedImage(w,h, BufferedImage.TYPE_INT_RGB)
+    val graphics = image.createGraphics()
+    graphics.color = Color(0,255,255)
+    for (i in 0..100) {
+        graphics.draw3DRect(100, 100, i, i, false)
+    }
+    return image
+}
+
 fun drawPolygon(w: Int, h: Int): BufferedImage{
     val image = BufferedImage(w, h, BufferedImage.TYPE_INT_RGB)
     val graphics = image.createGraphics()
@@ -22,7 +32,7 @@ fun drawPolygon(w: Int, h: Int): BufferedImage{
 }
 
 fun main(){
-    val dir = System.getProperty("user.home")
+    val dir = System.getProperty("user.home") + "/Desktop"
     val writeImageToFile = File("${dir}/myimage.png")
-    ImageIO.write(drawPolygon(300,300), "png", writeImageToFile)
+    ImageIO.write(filledRectangle(300,300), "png", writeImageToFile)
 }
